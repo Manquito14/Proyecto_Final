@@ -11,6 +11,7 @@ Librerías:
 - random
 - time
 - discord
+
 Versiones:
 - Versión de Python: 3.12.7
 - Versión de Discord: 2.5.2
