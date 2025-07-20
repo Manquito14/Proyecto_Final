@@ -3,14 +3,14 @@ El proyecto es un bot de discord el cual consiste en hacerle una trivia al usuar
 
 # Uso
 Comandos:
-/hola  |  El bot responderá con una guía sobre cuales comandos tiene y para que sirven.
-/trivia  |  El bot hará una pregunta sobre el cambio climático sacada del diccionario "trivia_cambio_climatico" y posteriormente dará un dato curioso relacionado.
+- /hola  |  El bot responderá con una guía sobre cuales comandos tiene y para que sirven.
+- /trivia  |  El bot hará una pregunta sobre el cambio climático sacada del diccionario "trivia_cambio_climatico" y posteriormente dará un dato curioso relacionado.
 
 # Instalación
 Librerías:
 - random
 - time
 - discord
-
-Versión de Python: 3.12.7
-Versión de Discord: 2.5.2
+Versiones:
+- Versión de Python: 3.12.7
+- Versión de Discord: 2.5.2
