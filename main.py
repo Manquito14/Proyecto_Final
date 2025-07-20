@@ -12,16 +12,25 @@ ecoco = commands.Bot(command_prefix="/", intents=permisos)
 
 @ecoco.event
 async def on_ready():
+    """
+    Aviso del estado de inicio del bot.
+    """
     print(f"{ecoco.user} está en linea")
 
 
 @ecoco.command()
 async def hola(ctx):
+    """
+    Guía sobre cuales comandos y su uso.
+    """
     await ctx.send("¡Hola! Soy Ecoco. \n Comandos:\n /hola  |  Te daré información sobre mis comandos y sus usos.\n /Trivia  |  Te haré una pregunta aleatoria sobre el cambio climático.")
 
 
 @ecoco.command()
 async def trivia(ctx):
+    """
+    Inicio y selección de la pregunta.
+    """
     await ctx.send("👀 ¿Estás listo para la trivia? Comencemos entonces en...")
     time.sleep(2)
     await ctx.send("3")
@@ -34,7 +43,9 @@ async def trivia(ctx):
     seleccion_de_pregunta = trivia_cambio_climatico[random.randint(1, len(trivia_cambio_climatico))]
 
     class TriviaBoton(discord.ui.View):
-
+        """
+        Muestra de las opciones de respuesta en el chat.
+        """
         def __init__(self):
             super().__init__(timeout=None)
 
@@ -51,6 +62,9 @@ async def trivia(ctx):
             await self.revision_de_respuesta(button, interaction)
 
         async def revision_de_respuesta(self, interaction, button):
+            """
+            Corrección o validación de la pregunta + dato curioso.
+            """
             respuesta_correcta = seleccion_de_pregunta["opciones"][seleccion_de_pregunta["respuesta_correcta"]]
             respuesta_usuario = button.label
 
